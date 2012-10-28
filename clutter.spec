@@ -1,11 +1,11 @@
 Summary:	Library for rich GUIs
 Name:		clutter
-Version:	1.12.0
+Version:	1.12.2
 Release:	1
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://download.gnome.org/sources/clutter/1.12/%{name}-%{version}.tar.xz
-# Source0-md5:	308cfeb82139c944160ce144aaa534a9
+# Source0-md5:	dce7b3bf85b39ca822d068470e5f5abb
 URL:		http://www.clutter-project.org/
 BuildRequires:	OpenGL-GLX-devel
 BuildRequires:	autoconf
