@@ -1,17 +1,17 @@
 Summary:	Library for rich GUIs
 Name:		clutter
-Version:	1.12.2
+Version:	1.14.0
 Release:	1
 License:	LGPL v2+
 Group:		Libraries
-Source0:	http://download.gnome.org/sources/clutter/1.12/%{name}-%{version}.tar.xz
-# Source0-md5:	dce7b3bf85b39ca822d068470e5f5abb
+Source0:	http://download.gnome.org/sources/clutter/1.14/%{name}-%{version}.tar.xz
+# Source0-md5:	b47e252050ee2d5b01118b5c54540135
 URL:		http://www.clutter-project.org/
 BuildRequires:	OpenGL-GLX-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	cairo-gobject-devel
-BuildRequires:	cogl-devel >= 1.12.0
+BuildRequires:	cogl-devel >= 1.14.0
 BuildRequires:	gobject-introspection-devel
 BuildRequires:	gtk+3-devel
 BuildRequires:	gtk-doc
