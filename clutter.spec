@@ -1,17 +1,17 @@
 Summary:	Library for rich GUIs
 Name:		clutter
-Version:	1.16.4
+Version:	1.18.0
 Release:	1
 License:	LGPL v2+
 Group:		Libraries
-Source0:	http://download.gnome.org/sources/clutter/1.16/%{name}-%{version}.tar.xz
-# Source0-md5:	29389588ce388bb64ec4d5c986a6afd3
+Source0:	http://download.gnome.org/sources/clutter/1.18/%{name}-%{version}.tar.xz
+# Source0-md5:	bdd6426ab2ca4885164736aa49dcea0a
 URL:		http://www.clutter-project.org/
 BuildRequires:	OpenGL-GLX-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	cairo-gobject-devel
-BuildRequires:	cogl-devel >= 1.16.0
+BuildRequires:	cogl-devel >= 1.18.0
 BuildRequires:	gobject-introspection-devel >= 1.38.0
 BuildRequires:	gtk+3-devel >= 3.10.0
 BuildRequires:	gtk-doc
@@ -71,7 +71,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-rm -rf $RPM_BUILD_ROOT%{_datadir}/locale/az_IR
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/*.la
+%{__rm} -r $RPM_BUILD_ROOT%{_datadir}/locale/az_IR
 
 %find_lang %{name}-1.0
 
