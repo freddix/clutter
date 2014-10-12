@@ -1,13 +1,14 @@
 Summary:	Library for rich GUIs
 Name:		clutter
 Version:	1.20.0
-Release:	1
+Release:	2
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://download.gnome.org/sources/clutter/1.20/%{name}-%{version}.tar.xz
 # Source0-md5:	a8a33a57a944c6d7c7c013ce9aa3222b
 URL:		http://www.clutter-project.org/
-BuildRequires:	OpenGL-GLX-devel
+BuildRequires:	Mesa-libEGL-devel
+BuildRequires:	Mesa-libGL-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	cairo-gobject-devel
@@ -16,6 +17,7 @@ BuildRequires:	gobject-introspection-devel >= 1.38.0
 BuildRequires:	gtk+3-devel >= 3.10.0
 BuildRequires:	gtk-doc
 BuildRequires:	json-glib-devel >= 0.16.2
+BuildRequires:	libinput-devel
 BuildRequires:	libtool
 BuildRequires:	pkg-config
 BuildRequires:	xorg-libX11-devel
@@ -61,6 +63,8 @@ clutter API documentation.
 %{__automake}
 %configure \
 	--disable-silent-rules		\
+	--enable-egl-backend		\
+	--enable-evdev-input		\
 	--enable-introspection=yes	\
 	--with-html-dir=%{_gtkdocdir}
 %{__make}
